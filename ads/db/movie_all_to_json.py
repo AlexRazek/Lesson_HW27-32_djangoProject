@@ -22,7 +22,7 @@ def csv_to_json_1(csvFilePath, jsonFilePath):
 
 
 csvFilePath = r'/Users/alexander/Pycharm:Projects/djangoProject/ads/db/ads.csv'
-jsonFilePath = r'/Users/alexander/Pycharm:Projects/djangoProject/ads/fixtures/ad.json'
+jsonFilePath = r'/Users/alexander/Pycharm:Projects/djangoProject/ads/fixtures/ad_old.json'
 csv_to_json_1(csvFilePath, jsonFilePath)
 
 # movie categories
@@ -47,7 +47,7 @@ def csv_to_json_2(csvFilePath, jsonFilePath):
 
 
 csvFilePath = r'/Users/alexander/Pycharm:Projects/djangoProject/ads/db/categories.csv'
-jsonFilePath = r'/Users/alexander/Pycharm:Projects/djangoProject/ads/fixtures/category.json'
+jsonFilePath = r'/Users/alexander/Pycharm:Projects/djangoProject/ads/fixtures/category_old.json'
 csv_to_json_2(csvFilePath, jsonFilePath)
 
 # movie locations
@@ -72,7 +72,7 @@ def csv_to_json_3(csvFilePath, jsonFilePath):
 
 
 csvFilePath = r'/Users/alexander/Pycharm:Projects/djangoProject/ads/db/locations.csv'
-jsonFilePath = r'/Users/alexander/Pycharm:Projects/djangoProject/ads/fixtures/location.json'
+jsonFilePath = r'/Users/alexander/Pycharm:Projects/djangoProject/ads/fixtures/location_old.json'
 csv_to_json_3(csvFilePath, jsonFilePath)
 
 # movie users
@@ -96,5 +96,5 @@ def csv_to_json_4(csvFilePath, jsonFilePath):
 
 
 csvFilePath = r'/Users/alexander/Pycharm:Projects/djangoProject/ads/db/users.csv'
-jsonFilePath = r'/Users/alexander/Pycharm:Projects/djangoProject/ads/fixtures/users.json'
+jsonFilePath = r'/Users/alexander/Pycharm:Projects/djangoProject/ads/fixtures/users_old.json'
 csv_to_json_4(csvFilePath, jsonFilePath)

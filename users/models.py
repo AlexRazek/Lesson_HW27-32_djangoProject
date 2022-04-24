@@ -26,7 +26,7 @@ class User(models.Model):
     password = models.CharField(max_length=120)
     role = models.CharField(max_length=15, choices=ROLES, default="member")
     age = models.PositiveIntegerField()
-    locations = models.ManyToManyField(Location)
+    location_id = models.ManyToManyField(Location)
     image = models.ImageField(upload_to='media/')
 
     class Meta:
