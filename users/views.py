@@ -1,7 +1,7 @@
 import json
 
 from django.conf import settings
-from django.core.exceptions import ValidationError
+
 from django.core.paginator import Paginator
 from django.db.models import Count
 from django.http import JsonResponse
@@ -9,8 +9,13 @@ from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import DetailView, ListView, CreateView, UpdateView, DeleteView
 
+from rest_framework.viewsets import ModelViewSet
+from rest_framework.generics import GenericAPIView
+from rest_framework.mixins import ListModelMixin
 
 from users.models import User, Location
+from users.serializers import LocationSerializer, UserSerializer, UserCreateSerializer, UserUpdateSerializer, \
+    UserDeleteSerializer
 
 
 @method_decorator(csrf_exempt, name='dispatch')
@@ -141,7 +146,31 @@ class UserDeleteView(DeleteView):
         return JsonResponse({"status": "ok"}, status=200)
 
 
+########################################
 
+class LocationViewSet(ModelViewSet):
+    queryset = Location.objects.all()
+    serializer_class = LocationSerializer
+
+class UserViewSet(ListApiView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+
+class UserDetailView(RetrieveApiView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+
+class UserCreateView(CreateApiView):
+    queryset = User.objects.all()
+    serializer_class = UserCreateSerializer
+
+class UserUpdateView(UpdateApiView):
+    queryset = User.objects.all()
+    serializer_class = UserUpdateSerializer
+
+class UserDeleteView(DestroyApiView):
+    queryset = User.objects.all()
+    serializer_class = UserDeleteSerializer
 
 
 
