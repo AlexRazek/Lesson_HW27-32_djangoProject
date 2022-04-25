@@ -19,6 +19,14 @@ from django.contrib import admin
 from django.urls import path, include
 
 from ads import views
+from users.views import LocationViewSet
+
+from rest_framework import routers
+
+router = routers.SimpleRouter()
+router.register('location', LocationViewSet)
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,7 +36,7 @@ urlpatterns = [
     path('cat/create/', views.CategoryCreateView.as_view()),
     path('cat/<int:pk>/update/', views.CategoryUpdateView.as_view()),
     path('cat/<int:pk>/delete/', views.CategoryDeleteView.as_view()),
-    path('ad/', views.CategoryView.as_view()),
+    path('ad/', views.AdView.as_view()),
     path('ad/<int:pk>', views.AdDetailView.as_view()),
     path('ad/create/', views.AdCreateView.as_view()),
     path('ad/<int:pk>/update/', views.AdUpdateView.as_view()),
@@ -41,3 +49,5 @@ urlpatterns = [
     path('user/<int:pk>/delete/', include('users.urls')),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+urlpatterns += router.urls
