@@ -141,7 +141,7 @@ class AdView(ListView):
             "description": ad.description,
             "is_published": ad.is_published,
             "category_id": ad.category_id,
-            "image": ad.media.url if ad.media else None,
+            "image": ad.image.url if ad.image else None,
         })
 
         response = {
@@ -181,7 +181,7 @@ class AdCreateView(CreateView):
             "description": ad.description,
             "is_published": ad.is_published,
             "category_id": ad.category_id,
-            "image": ad.media.url if ad.media else None,
+            "image": ad.image.url if ad.image else None,
         })
 
 
@@ -201,7 +201,7 @@ class AdDetailView(DetailView):
             "description": ad.description,
             "is_published": ad.is_published,
             "category_id": ad.category_id,
-            "image": ad.media.url if ad.media else None,
+            "image": ad.image.url if ad.image else None,
         })
 
 
@@ -236,7 +236,7 @@ class AdUpdateView(UpdateView):
             "description": self.object.description,
             "is_published": self.object.is_published,
             "category_id": self.object.category_id,
-            "image": self.object.media.url if self.object.media else None,
+            "image": self.object.image.url if self.object.image else None,
         })
 
 
@@ -277,5 +277,5 @@ class AdUploadImageView(UpdateView):
             "description": self.object.description,
             "is_published": self.object.is_published,
             "category_id": self.object.category_id,
-            "image": self.object.media.url if self.object.media else None,
+            "image": self.object.image.url if self.object.image else None,
         })

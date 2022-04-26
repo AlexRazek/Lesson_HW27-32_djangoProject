@@ -1,7 +1,7 @@
 [
     {
     "model": "users.user",
-    "id": 1,
+    "pk": 1,
     "fields": {
         "first_name": "Павел",
         "second_name": "Никифоров",
@@ -14,7 +14,7 @@
     },
     {
     "model": "users.user",
-    "id": 2,
+    "pk": 2,
     "fields": {
         "first_name": "Альбина",
         "second_name": "Игнатьева",
@@ -27,7 +27,7 @@
     },
     {
     "model": "users.user",
-    "id": 3,
+    "pk": 3,
     "fields": {
         "first_name": "Иван",
         "second_name": "Сысоев",
@@ -40,7 +40,7 @@
     },
     {
     "model": "users.user",
-    "id": 4,
+    "pk": 4,
     "fields": {
         "first_name": "Марина",
         "second_name": "Беркутова",
@@ -53,7 +53,7 @@
     },
     {
     "model": "users.user",
-    "id": 5,
+    "pk": 5,
     "fields": {
         "first_name": "Галина",
         "second_name": "Иванова",
@@ -66,7 +66,7 @@
     },
     {
     "model": "users.user",
-    "id": 6,
+    "pk": 6,
     "fields": {
         "first_name": "Петр",
         "second_name": "Бойченко",
@@ -79,7 +79,7 @@
     },
     {
     "model": "users.user",
-    "id": 7,
+    "pk": 7,
     "fields": {
         "first_name": "Никита",
         "second_name": "",
@@ -92,7 +92,7 @@
     },
     {
     "model": "users.user",
-    "id": 8,
+    "pk": 8,
     "fields": {
         "first_name": "Виолетта",
         "second_name": "Петушок",
@@ -105,7 +105,7 @@
     },
     {
     "model": "users.user",
-    "id": 9,
+    "pk": 9,
     "fields": {
         "first_name": "Гульнара",
         "second_name": "Ибрагимова",
@@ -118,7 +118,7 @@
     },
     {
     "model": "users.user",
-    "id": 10,
+    "pk": 10,
     "fields": {
         "first_name": "Борис",
         "second_name": "Зайка",
