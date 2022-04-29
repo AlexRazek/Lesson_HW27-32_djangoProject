@@ -1,5 +1,5 @@
 from django.db import models
-from uuid import uuid4
+
 
 from users.models import User
 
@@ -19,7 +19,7 @@ class Ad(models.Model):
     address = models.CharField(max_length=250)
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True)
     is_published = models.CharField(max_length=20)
-    image = models.ImageField(upload_to='media/', null=True, blank=True)
+    image = models.ImageField(upload_to='logos/', null=True, blank=True)
 
     class Meta:
         verbose_name = "Обьявление"

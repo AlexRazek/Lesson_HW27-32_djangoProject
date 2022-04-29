@@ -1,7 +1,7 @@
 [
     {
     "model": "ads.ad",
-    "id": 1,
+    "pk": 1,
     "fields": {
         "name": "Сибирская котята, 3 месяца",
         "author_id": 1,
@@ -14,7 +14,7 @@
     },
     {
     "model": "ads.ad",
-    "id": 2,
+    "pk": 2,
     "fields": {
         "name": "Стратегия голубого океана \n",
         "author_id": 1,
@@ -27,7 +27,7 @@
     },
     {
     "model": "ads.ad",
-    "id": 3,
+    "pk": 3,
     "fields": {
         "name": "Принципы, Рэй Далио",
         "author_id": 5,
@@ -40,7 +40,7 @@
     },
     {
     "model": "ads.ad",
-    "id": 4,
+    "pk": 4,
     "fields": {
         "name": "Разумный инвестор",
         "author_id": 5,
@@ -53,7 +53,7 @@
     },
     {
     "model": "ads.ad",
-    "id": 5,
+    "pk": 5,
     "fields": {
         "name": "Розанов В. В. Уединенное",
         "author_id": 10,
@@ -66,7 +66,7 @@
     },
     {
     "model": "ads.ad",
-    "id": 6,
+    "pk": 6,
     "fields": {
         "name": "Alice Sebold - The lovely bone\n",
         "author_id": 8,
@@ -79,7 +79,7 @@
     },
     {
     "model": "ads.ad",
-    "id": 7,
+    "pk": 7,
     "fields": {
         "name": "Котята в добрые руки",
         "author_id": 5,
@@ -92,7 +92,7 @@
     },
     {
     "model": "ads.ad",
-    "id": 8,
+    "pk": 8,
     "fields": {
         "name": "Молодая кошечка Груша",
         "author_id": 5,
@@ -105,7 +105,7 @@
     },
     {
     "model": "ads.ad",
-    "id": 9,
+    "pkpk": 9,
     "fields": {
         "name": "Собака в добрые руки",
         "author_id": 5,
@@ -118,7 +118,7 @@
     },
     {
     "model": "ads.ad",
-    "id": 10,
+    "pkpk": 10,
     "fields": {
         "name": "Собака Дуся в добрые руки",
         "author_id": 5,
@@ -131,7 +131,7 @@
     },
     {
     "model": "ads.ad",
-    "id": 11,
+    "pk": 11,
     "fields": {
         "name": "Стол из слэба и эпоксидной смолы",
         "author_id": 6,
@@ -144,7 +144,7 @@
     },
     {
     "model": "ads.ad",
-    "id": 12,
+    "pk": 12,
     "fields": {
         "name": "Собака в добрые руки",
         "author_id": 6,
@@ -157,7 +157,7 @@
     },
     {
     "model": "ads.ad",
-    "id": 13,
+    "pk": 13,
     "fields": {
         "name": "Метис овчарки в добрые руки",
         "author_id": 7,
@@ -170,7 +170,7 @@
     },
     {
     "model": "ads.ad",
-    "id": 14,
+    "pk": 14,
     "fields": {
         "name": "Черенки петунии, рассада цветов, овощей",
         "author_id": 7,
@@ -183,7 +183,7 @@
     },
     {
     "model": "ads.ad",
-    "id": 15,
+    "pkpk": 15,
     "fields": {
         "name": "Гардения Жасминовидная",
         "author_id": 7,
@@ -196,7 +196,7 @@
     },
     {
     "model": "ads.ad",
-    "id": 16,
+    "pkpk": 16,
     "fields": {
         "name": "Петуния, крейзитуния, бленкет, сурфиния, калиб",
         "author_id": 10,
@@ -209,7 +209,7 @@
     },
     {
     "model": "ads.ad",
-    "id": 17,
+    "pkpk": 17,
     "fields": {
         "name": "Добрый песик ищет хозяина",
         "author_id": 10,
@@ -222,7 +222,7 @@
     },
     {
     "model": "ads.ad",
-    "id": 18,
+    "pk": 18,
     "fields": {
         "name": "Стол лофт большой\n",
         "author_id": 1,
@@ -235,7 +235,7 @@
     },
     {
     "model": "ads.ad",
-    "id": 19,
+    "pk": 19,
     "fields": {
         "name": "Стол прямой прям хороший",
         "author_id": 10,
@@ -248,7 +248,7 @@
     },
     {
     "model": "ads.ad",
-    "id": 20,
+    "pk": 20,
     "fields": {
         "name": "Котенок в добрые руки",
         "author_id": 7,

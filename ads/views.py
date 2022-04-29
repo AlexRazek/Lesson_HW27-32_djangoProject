@@ -108,6 +108,23 @@ class AdView(ListView):
 
     def get(self, request, *args, **kwargs):
         super().get(request, *args, **kwargs)
+
+        categories = request.GET.getlist("cat", [])
+        if categories:
+            self.object_list = self.object_list.filter(category_id__in=categories)
+
+        if request.GET.get("text", None):
+            self.object_list = self.object_list.filter(name__icontains=request.GET.get("text"))
+
+        if request.GET.get("location", None):
+            self.object_list = self.object_list.filter(author__locations_name_icontains=request.GET.get("location"))
+
+        if request.GET.get("price_from", None):
+            self.object_list = self.object_list.filter(prcie_gte=request.GET.get("price_from"))
+
+        if request.GET.get("price_to", None):
+            self.object_list = self.object_list.filter(price__lte=request.GET.get("price_to"))
+
         self.object_list = self.object_list.select_related("author").order_by("-price")
         paginator = Paginator(self.object_list, settings.TOTAL_ON_PAGE)
         page_number = request.GET.get('page')
@@ -124,7 +141,7 @@ class AdView(ListView):
             "description": ad.description,
             "is_published": ad.is_published,
             "category_id": ad.category_id,
-            "image": ad.media.url if ad.media else None,
+            "image": ad.image.url if ad.image else None,
         })
 
         response = {
@@ -164,7 +181,7 @@ class AdCreateView(CreateView):
             "description": ad.description,
             "is_published": ad.is_published,
             "category_id": ad.category_id,
-            "image": ad.media.url if ad.media else None,
+            "image": ad.image.url if ad.image else None,
         })
 
 
@@ -184,7 +201,7 @@ class AdDetailView(DetailView):
             "description": ad.description,
             "is_published": ad.is_published,
             "category_id": ad.category_id,
-            "image": ad.media.url if ad.media else None,
+            "image": ad.image.url if ad.image else None,
         })
 
 
@@ -219,7 +236,7 @@ class AdUpdateView(UpdateView):
             "description": self.object.description,
             "is_published": self.object.is_published,
             "category_id": self.object.category_id,
-            "image": self.object.media.url if self.object.media else None,
+            "image": self.object.image.url if self.object.image else None,
         })
 
 
@@ -260,5 +277,5 @@ class AdUploadImageView(UpdateView):
             "description": self.object.description,
             "is_published": self.object.is_published,
             "category_id": self.object.category_id,
-            "image": self.object.media.url if self.object.media else None,
+            "image": self.object.image.url if self.object.image else None,
         })

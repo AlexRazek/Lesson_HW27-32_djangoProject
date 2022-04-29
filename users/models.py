@@ -27,7 +27,7 @@ class User(models.Model):
     role = models.CharField(max_length=15, choices=ROLES, default="member")
     age = models.PositiveIntegerField()
     location_id = models.ManyToManyField(Location)
-    image = models.ImageField(upload_to='media/')
+    image = models.ImageField(upload_to='image/')
 
     class Meta:
         verbose_name = "Пользователь"
