@@ -1,7 +1,7 @@
 from django.db import models
 
-
 from users.models import User
+
 
 
 class Category(models.Model):
@@ -24,6 +24,20 @@ class Ad(models.Model):
     class Meta:
         verbose_name = "Обьявление"
         verbose_name_plural = "Обьявления"
+
+
+class Selection(models.Model):
+    name = models.CharField(max_length=50)
+    owner = models.IntegerField()
+    items = models.TextField(max_length=1000, null=True, blank=True)
+
+
+    # class Meta:
+    #     verbose_name = "Подбор"
+    #     verbose_name_plural = "Подборки"
+
+    class Ad:
+        fields = '__all__'
 
     def __str__(self):
         return self.name
