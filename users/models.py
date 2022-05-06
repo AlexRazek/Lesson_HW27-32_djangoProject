@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import AbstractUser
 
 
 class Location(models.Model):
@@ -14,20 +15,25 @@ class Location(models.Model):
         return self.name
 
 
-class User(models.Model):
+class User(AbstractUser):
+    MEMBER = "member"
+    MODERATOR = "moderator"
+    ADMIN = "admin"
     ROLES = [
         ("member", "Пользователь"),
         ("moderator", "Модератор"),
         ("admin", "Администратор"),
     ]
-    first_name = models.CharField(max_length=20)
-    second_name = models.CharField(max_length=25, null=True, blank=True)
-    username = models.CharField(max_length=20)
-    password = models.CharField(max_length=120)
-    role = models.CharField(max_length=15, choices=ROLES, default="member")
-    age = models.PositiveIntegerField()
-    location_id = models.ManyToManyField(Location)
-    image = models.ImageField(upload_to='image/')
+
+    role = models.CharField(max_length=10, choices=ROLES, default="member")
+    age = models.PositiveIntegerField(null=True)
+    locations = models.ManyToManyField(Location)
+    # first_name = models.CharField(max_length=20)
+    # second_name = models.CharField(max_length=25, null=True, blank=True)
+    # username = models.CharField(max_length=20)
+    # password = models.CharField(max_length=120)
+    # location_id = models.ManyToManyField(Location)
+    # image = models.ImageField(upload_to='image/')
 
     class Meta:
         verbose_name = "Пользователь"
