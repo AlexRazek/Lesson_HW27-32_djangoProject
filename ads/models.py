@@ -32,12 +32,11 @@ class Selection(models.Model):
     items = models.TextField(max_length=1000, null=True, blank=True)
 
 
-    # class Meta:
-    #     verbose_name = "Подбор"
-    #     verbose_name_plural = "Подборки"
+    class Meta:
+        verbose_name = "Подбор"
+        # verbose_name_plural = "Подборки"
 
-    class Ad:
-        fields = '__all__'
+
 
     def __str__(self):
         return self.name
