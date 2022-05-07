@@ -48,7 +48,7 @@ urlpatterns = [
     path('user/<int:pk>/update/', include('users.urls')),
     path('user/<int:pk>/delete/', include('users.urls')),
     path('selection/', views.SelectionListView.as_view()),
-    # path('selection/<int:pk>', views.SelectionRetrieveView.as_view()),
+    path('selection/<int:pk>', views.SelectionRetrieveView.as_view()),
     path('selection/create/', views.SelectionCreateView.as_view()),
     path('selection/<int:pk>/update/', views.SelectionUpdateView.as_view()),
     path('selection/<int:pk>/delete/', views.SelectionDeleteView.as_view()),

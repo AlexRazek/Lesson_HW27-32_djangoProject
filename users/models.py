@@ -1,5 +1,7 @@
+from django.core.validators import MaxValueValidator
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+from datetime import date
 
 
 class Location(models.Model):
@@ -28,6 +30,15 @@ class User(AbstractUser):
     role = models.CharField(max_length=10, choices=ROLES, default="member")
     age = models.PositiveIntegerField(null=True)
     locations = models.ManyToManyField(Location)
+    birth_date = models.DateField(
+        # format='%d.%m.%Y',
+        # input_formats=['%d.%m.%Y', 'iso-8601'],
+        null=True,
+        validators=[MaxValueValidator(date(2013, 5, 8))]
+    )
+    email = models.EmailField(unique=True, null=True)
+
+
     # first_name = models.CharField(max_length=20)
     # second_name = models.CharField(max_length=25, null=True, blank=True)
     # username = models.CharField(max_length=20)

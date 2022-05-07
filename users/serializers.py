@@ -2,6 +2,11 @@ from rest_framework import serializers
 
 from users.models import Location, User
 
+class CheckRamblerEmail:
+    def __call__(self, value):
+        if value.endswith("rambler.ru", "rambler.com"):
+            raise serializers.ValidationError("Only for another users ")
+
 
 class LocationSerializer(serializers.ModelSerializer):
     class Meta:
@@ -27,6 +32,8 @@ class UserCreateSerializer(serializers.ModelSerializer):
         many=True,
         slug_field="name"
     )
+
+    email = serializers.EmailField(validators=[CheckRamblerEmail()])
 
     def is_valid(self, raise_exception=False):
         self._locations = self.initial_data.pop("locations")

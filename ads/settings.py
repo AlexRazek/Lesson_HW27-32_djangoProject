@@ -121,8 +121,13 @@ USE_TZ = True
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 10
+    'PAGE_SIZE': 10,
+    'DATE_INPUT_FORMATS': [
+        '%d.%m.%Y',  # '25.10.2021'
+        '%d.%m.%y',  # '25.10.21'
+    ],
 }
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/

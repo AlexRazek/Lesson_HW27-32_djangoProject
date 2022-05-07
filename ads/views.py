@@ -13,10 +13,10 @@ from rest_framework.permissions import IsAuthenticated
 
 from ads.models import Ad, Category, Selection
 from ads.permissions import SelectionUpdatePermission, AdUpdatePermission
-from ads.serializers import AdDeleteSerializer, AdDetailSerializer, SelectionSerializer, SelectionListSerializer
+from ads.serializers import AdDeleteSerializer, AdDetailSerializer, SelectionSerializer, SelectionListSerializer, SelectionDetailSerializer
 from users.models import User
 
-# SelectionDetailSerializer,
+
 
 def root(request):
     return JsonResponse({"status": "ok"})
@@ -39,9 +39,9 @@ class SelectionListView(ListAPIView):
 
         return super().get(request, *args, **kwargs)
 
-# class SelectionRetrieveView(RetrieveAPIView):
-#     queryset = Selection.objects.all()
-#     serializer_class = SelectionDetailSerializer
+class SelectionRetrieveView(RetrieveAPIView):
+    queryset = Selection.objects.all()
+    serializer_class = SelectionDetailSerializer
 
 class SelectionCreateView(CreateAPIView):
     queryset = Selection.objects.all()
