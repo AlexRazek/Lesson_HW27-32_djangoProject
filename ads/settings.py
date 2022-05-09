@@ -144,11 +144,11 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "image")
 
 TOTAL_ON_PAGE = 13
 
-REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework.authentication.TokenAuthentication',
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    ]
-}
+# REST_FRAMEWORK = {
+#     'DEFAULT_AUTHENTICATION_CLASSES': [
+#         'rest_framework.authentication.TokenAuthentication',
+#         'rest_framework_simplejwt.authentication.JWTAuthentication',
+#     ]
+# }
 
 AUTH_USER_MODEL = 'users.User'
