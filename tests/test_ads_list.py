@@ -1,6 +1,6 @@
 import pytest
 
-from ads.tests.factories import AdFactory
+from tests.factories import AdFactory
 
 @pytest.mark.django_db
 def test_ads_list(client):

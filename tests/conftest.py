@@ -1,6 +1,6 @@
 from pytest_factoryboy import register
 
-from ads.tests.factories import UserFactory, CategoryFactory, AdFactory
+from tests.factories import UserFactory, CategoryFactory, AdFactory
 
 pytest_plugins = "ads.tests.fixtures"
 
